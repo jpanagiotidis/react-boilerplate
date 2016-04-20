@@ -1,5 +1,5 @@
 'use strict';
 
-require('./style/lp.scss');
+require('../sass/lp.scss');
 
 console.log('YEAH');

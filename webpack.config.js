@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = [
   {
-    entry:  __dirname + "/source/app.js",
+    entry:  __dirname + "/source/js/app.js",
     output: {
       path: __dirname + "/build",
       filename: "lp-analytics.js"
