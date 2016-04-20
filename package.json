@@ -7,7 +7,8 @@
     "start": "webpack && node server-dev.js",
     "client-dev": "webpack --progress --watch",
     "server-dev": "node server-dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "baobab-react": "^2.0.0-rc1",
     "copy-webpack-plugin": "^2.1.1",
     "css-loader": "^0.23.1",
+    "eslint": "^2.8.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "history": "^2.1.0",
     "html-webpack-plugin": "^2.16.0",
@@ -50,5 +52,8 @@
     "superagent": "^1.8.3",
     "underscore": "^1.8.3",
     "webpack": "^1.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.8.0"
   }
 }
