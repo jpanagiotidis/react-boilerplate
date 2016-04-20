@@ -2,7 +2,12 @@
 
 import '../sass/lp.scss';
 
-console.log('YEAH');
+import React from 'react';
+import {render} from 'react-dom';
+import {Router, Route, hashHistory} from 'react-router';
+import {AppLoader} from './components';
+
+render(<AppLoader/>, document.getElementById('app_frame'))
 
 moufa()
 .then((data) => {

@@ -28,8 +28,8 @@ module.exports = [
     },
     plugins: [
       new ExtractTextPlugin("lp-analytics.css"),
-      new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
+      // new webpack.optimize.OccurenceOrderPlugin(),
+      // new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
         template: __dirname + '/source/html/index.tpl.html'
       })

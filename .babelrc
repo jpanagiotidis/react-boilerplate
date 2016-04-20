@@ -11,15 +11,6 @@
         "module": "bluebird",
         "method": "coroutine"
       }
-    ],
-    [
-      "react-transform", {
-        "transforms": [{
-          "transform": "react-transform-hmr",
-          "imports": ["react"],
-          "locals": ["module"]
-        }]
-      }
     ]
   ]
 }
