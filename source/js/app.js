@@ -11,14 +11,15 @@ import {
   AppLoader,
   TitleView,
   DashboardView,
+  DashboardHome,
   NotFound
 } from './components';
 
 render(<AppLoader/>, document.getElementById('app_frame'))
 
 appInit()
-.then((data) => {
-  console.log('APP LOADED SUCCESSFULLY', data);
+.then(() => {
+  console.log('APP LOADED SUCCESSFULLY');
 })
 .catch((err) => {
   console.log(err);
@@ -29,7 +30,9 @@ async function appInit(){
   render(
     <Router history={history}>
       <Route path="/" component={TitleView}/>
-      <Route path="/dashboard" component={DashboardView}/>
+      <Route path="dashboard" component={DashboardView}>
+        <Route path="/home" component={DashboardHome}/>
+      </Route>
       <Route path="*" component={NotFound}/>
     </Router>,
     document.getElementById('app_frame')
