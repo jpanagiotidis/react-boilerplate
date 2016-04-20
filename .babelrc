@@ -1,15 +1,25 @@
 {
-  'presets': ['es2015', 'react'],
-  'compact': false,
-  'env': {
-    'development': {
-      'plugins': [['react-transform', {
-        'transforms': [{
-          'transform': 'react-transform-hmr',
-          'imports': ['react'],
-          'locals': ['module']
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "compact": false,
+  "plugins": [
+    "transform-runtime",
+    [
+      "transform-async-to-module-method", {
+        "module": "bluebird",
+        "method": "coroutine"
+      }
+    ],
+    [
+      "react-transform", {
+        "transforms": [{
+          "transform": "react-transform-hmr",
+          "imports": ["react"],
+          "locals": ["module"]
         }]
-      }]]
-    }
-  }
+      }
+    ]
+  ]
 }
