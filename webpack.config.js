@@ -5,10 +5,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = [
   {
     devtool: "eval-source-map",
-    entry:  __dirname + "/source/js/app.js",
+    entry:  __dirname + "/source/client/js/app.js",
     output: {
       path: __dirname + "/build",
-      filename: "lp-analytics.js"
+      filename: "lp-analytics-client.js"
     },
     module: {
       loaders: [
@@ -32,7 +32,7 @@ module.exports = [
       // new webpack.optimize.OccurenceOrderPlugin(),
       // new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
-        template: __dirname + '/source/html/index.tpl.html'
+        template: __dirname + '/source/client/html/index.tpl.html'
       })
     ]
   }
