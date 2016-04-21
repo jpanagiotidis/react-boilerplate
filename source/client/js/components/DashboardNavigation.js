@@ -15,7 +15,7 @@ class DashboardNavigation extends Component{
       <div className="lp-db-nav-menu">
         <ul>
           <li>
-            <Link to="/dashboard/home">Home</Link>
+            <Link to="/dashboard">Home</Link>
           </li>
           <li>
             <Link to="/dashboard/settings">Settings</Link>

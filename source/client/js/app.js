@@ -4,7 +4,7 @@ import '../sass/lp.scss';
 
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, hashHistory, Redirect} from 'react-router';
+import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 
 import {history} from './managers/StateManager.js';
 import {
@@ -30,12 +30,11 @@ appInit()
 async function appInit(){
   render(
     <Router history={history}>
-      <Route path="" component={TitleView}/>
+      <Route path="/" component={TitleView}/>
       <Route path="dashboard" component={DashboardView}>
-        <Route path="home" component={DashboardHome}/>
+        <IndexRoute component={DashboardHome}/>
         <Route path="settings" component={DashboardSettings}/>
       </Route>
-      <Redirect from="dashboard" to="dashboard/home"/>
       <Route path="*" component={NotFound}/>
     </Router>,
     document.getElementById('app_frame')
