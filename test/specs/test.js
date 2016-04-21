@@ -1,6 +1,6 @@
 'use strict'
 
-var assert = require('assert');
+const assert = require('assert');
 
 describe('landing page', function() {
     it('should have the right title', function () {
