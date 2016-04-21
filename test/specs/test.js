@@ -1,6 +1,15 @@
-'use strict'
-
 const assert = require('assert');
+
+const webdriverHigherOrderAsync = (fn) => {
+    return async (done) => {
+        try {
+            await fn();
+            done();
+        } catch (err) {
+            done(err);
+        }
+    };
+};
 
 describe('landing page', function() {
     it('should have the right title', function () {
@@ -14,16 +23,16 @@ describe('landing page', function() {
     it('should navigate on click to the proper pages', function () {
       browser.url('/');
       browser.click('a');
-      var txt = browser.getText('h1*=DASHBOARD');
+      const txt = browser.getText('h1*=DASHBOARD');
       assert.equal(txt, 'DASHBOARD');
-      var txt2 = browser.getText('h1*=HOME');
+      const txt2 = browser.getText('h1*=HOME');
       assert.equal(txt2, 'HOME VIEW');
       browser.click('a*=Users');
-      var txt3 = browser.getText('h1*=USERS');
+      const txt3 = browser.getText('h1*=USERS');
       assert.equal(txt3, 'USERS VIEW');
       browser.click('a*=Settings');
-      var txt3 = browser.getText('h1*=SETTINGS');
-      assert.equal(txt3, 'SETTINGS VIEW');
+      const txt4 = browser.getText('h1*=SETTINGS');
+      assert.equal(txt4, 'SETTINGS VIEW');
     });
 
 

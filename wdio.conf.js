@@ -108,7 +108,9 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        compilers: 'js:babel-core/register',
+        require: 'babel-polyfill'
     },
     //
     // =====
@@ -127,6 +129,11 @@ exports.config = {
     // variables, such as `browser`. It is the perfect place to define custom commands.
     // before: function (capabilities, specs) {
     // },
+    before: function() {
+      var chai = require('chai');
+      global.expect = chai.expect;
+      chai.Should();
+    }
     //
     // Hook that gets executed before the suite starts
     // beforeSuite: function (suite) {

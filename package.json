@@ -7,7 +7,7 @@
     "start": "webpack --progress && node server-polyfill.js",
     "client-dev": "webpack --progress --watch",
     "server-dev": "node server-polyfill.js",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
+    "test": "mocha --timeout 15000 --compilers js:babel-core/register --require babel-polyfill",
     "lint": "eslint ."
   },
   "repository": {
