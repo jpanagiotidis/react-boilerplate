@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 
-class DashboardSettings extends Component{
+class DashboardUsers extends Component{
   constructor(props){
     super(props);
   }
@@ -11,9 +11,9 @@ class DashboardSettings extends Component{
     const self = this;
 
     return(
-      <h1>SETTINGS VIEW</h1>
+      <h1>USERS VIEW</h1>
     );
   }
 }
 
-export default DashboardSettings;
+export default DashboardUsers;

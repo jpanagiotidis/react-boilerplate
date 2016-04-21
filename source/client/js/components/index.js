@@ -1,7 +1,10 @@
 export { default as AppLoader } from './AppLoader.js';
+export { default as App } from './App.js';
 export { default as TitleView } from './TitleView.js';
 export { default as DashboardView } from './DashboardView.js';
 export { default as DashboardHome } from './DashboardHome.js';
+export { default as DashboardUsers } from './DashboardUsers.js';
 export { default as DashboardSettings } from './DashboardSettings.js';
 export { default as DashboardNavigation } from './DashboardNavigation.js';
+export { default as DashboardNavigationItem } from './DashboardNavigationItem.js';
 export { default as NotFound } from './NotFound.js';

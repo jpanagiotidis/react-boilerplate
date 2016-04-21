@@ -1,6 +1,8 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { root } from 'baobab-react/higher-order';
+import { tree } from '../managers/StateManager.js';
 
 class App extends Component{
   constructor(props){
@@ -9,13 +11,8 @@ class App extends Component{
 
   render(){
     const self = this;
-
-    return(
-      <div className="lp-app">
-        <h1>Amazing APP</h1>
-      </div>
-    );
+    return(self.props.children);
   }
 }
 
-export default App;
+export default root(App, tree);

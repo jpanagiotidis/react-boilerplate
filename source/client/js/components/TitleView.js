@@ -14,7 +14,7 @@ class TitleView extends Component{
     return(
       <div className="lp-app">
         <h1>APP TITLE PAGE</h1>
-        <Link to="dashboard">Start</Link>
+        <Link to="/dashboard">Start</Link>
       </div>
     );
   }

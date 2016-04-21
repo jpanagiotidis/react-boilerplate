@@ -9,9 +9,11 @@ import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 import {history} from './managers/StateManager.js';
 import {
   AppLoader,
+  App,
   TitleView,
   DashboardView,
   DashboardHome,
+  DashboardUsers,
   DashboardSettings,
   NotFound
 } from './components';
@@ -30,12 +32,15 @@ appInit()
 async function appInit(){
   render(
     <Router history={history}>
-      <Route path="/" component={TitleView}/>
-      <Route path="dashboard" component={DashboardView}>
+      <Route path="/" component={App}>
+        <IndexRoute component={TitleView}/>
+        <Route path="dashboard" component={DashboardView}>
         <IndexRoute component={DashboardHome}/>
+        <Route path="users" component={DashboardUsers}/>
         <Route path="settings" component={DashboardSettings}/>
+        </Route>
+        <Route path="*" component={NotFound}/>
       </Route>
-      <Route path="*" component={NotFound}/>
     </Router>,
     document.getElementById('app_frame')
   );

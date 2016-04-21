@@ -11,7 +11,7 @@ class DashboardHome extends Component{
     const self = this;
 
     return(
-      <h1>DASHBOARD HOME VIEW</h1>
+      <h1>HOME VIEW</h1>
     );
   }
 }

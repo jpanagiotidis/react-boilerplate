@@ -1,11 +1,20 @@
 'use strict';
 
-import React, {Component} from 'react';
+import _ from 'underscore';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { branch } from 'baobab-react/higher-order';
+import { DashboardNavigationItem } from '../components';
 
 class DashboardNavigation extends Component{
   constructor(props){
     super(props);
+  }
+
+  getLinks(list, current_path){
+    return _.map(list, (obj, i) => {
+      return <DashboardNavigationItem key={i} data={obj} current_path={current_path}/>
+    });
   }
 
   render(){
@@ -14,16 +23,15 @@ class DashboardNavigation extends Component{
     return(
       <div className="lp-db-nav-menu">
         <ul>
-          <li>
-            <Link to="/dashboard">Home</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/settings">Settings</Link>
-          </li>
+          {self.getLinks(self.props.links, self.props.pathname)}
         </ul>
       </div>
     );
   }
 }
 
-export default DashboardNavigation;
+export default branch(DashboardNavigation, {
+  cursors: {
+    links: ['dashboard', 'links']
+  }
+});
