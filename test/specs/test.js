@@ -23,4 +23,6 @@ describe('landing page', function() {
       var txt3 = browser.getText('h1*=SETTINGS');
       assert.equal(txt3, 'SETTINGS VIEW');
     });
+
+    
 });
