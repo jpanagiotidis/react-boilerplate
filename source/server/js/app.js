@@ -1,6 +1,6 @@
 'use strict';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const Koa = require('koa');
 const Router = require('koa-router');
 const serve = require('koa-static');

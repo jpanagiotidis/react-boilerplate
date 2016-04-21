@@ -67,6 +67,7 @@
     "eslint": "2.8.0",
     "mocha": "2.4.5",
     "selenium-standalone": "^5.1.0",
+    "wdio-mocha-framework": "^0.2.12",
     "webdriverio": "4.0.5"
   }
 }
