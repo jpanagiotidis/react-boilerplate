@@ -8,7 +8,8 @@ module.exports = [
     entry:  __dirname + "/source/client/js/app.js",
     output: {
       path: __dirname + "/build",
-      filename: "lp-analytics-client.js"
+      filename: "lp-analytics-client.js",
+      publicPath: "/"
     },
     module: {
       loaders: [
@@ -32,7 +33,8 @@ module.exports = [
       // new webpack.optimize.OccurenceOrderPlugin(),
       // new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
-        template: __dirname + '/source/client/html/index.tpl.html'
+        template: __dirname + '/source/client/html/index.tpl.html',
+        baseHref: "http://localohost:3000"
       })
     ]
   }
