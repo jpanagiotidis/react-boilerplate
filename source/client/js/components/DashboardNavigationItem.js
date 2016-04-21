@@ -10,8 +10,14 @@ class DashboardNavigationItem extends Component{
 
   render(){
     const self = this;
+    const classes = [];
+
+    if(self.props.current_path === self.props.data.path){
+      classes.push('active');
+    }
+
     return(
-      <li>
+      <li className={classes.join(' ')}>
         <Link to={self.props.data.path}>
           {self.props.data.label}
         </Link>

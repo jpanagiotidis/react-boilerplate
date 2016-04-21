@@ -5,3 +5,15 @@ body{
     font-size: 40px;
   }
 }
+
+.lp-db-nav-menu{
+  ul{
+    li.active{
+      background-color: black;
+
+      a{
+        color: white;
+      }
+    }
+  }
+}
