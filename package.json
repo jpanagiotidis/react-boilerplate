@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && node server-dev.js",
+    "start": "webpack && node source/server/js/app.js",
     "client-dev": "webpack --progress --watch",
-    "server-dev": "node server-dev.js",
+    "server-dev": "node source/server/js/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
