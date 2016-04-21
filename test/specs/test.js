@@ -1,8 +1,10 @@
+'use strict'
+
 var assert = require('assert');
 
 describe('landing page', function() {
     it('should have the right title', function () {
-        browser.url('http://localhost:3000');
+        browser.url('/');
         var title = browser.getTitle();
         assert.equal(title, 'Liquidpace Analytics');
         var txt = browser.getText('h1*=APP');
@@ -10,7 +12,7 @@ describe('landing page', function() {
     });
 
     it('should navigate on click to the proper pages', function () {
-      browser.url('http://localhost:3000');
+      browser.url('/');
       browser.click('a');
       var txt = browser.getText('h1*=DASHBOARD');
       assert.equal(txt, 'DASHBOARD');
@@ -24,5 +26,5 @@ describe('landing page', function() {
       assert.equal(txt3, 'SETTINGS VIEW');
     });
 
-    
+
 });
