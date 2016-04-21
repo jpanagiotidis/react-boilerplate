@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack && node source/server/js/app.js",
     "client-dev": "webpack --progress --watch",
-    "server-dev": "node source/server/js/app.js",
+    "server-dev": "node server-polyfill.js",
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
     "lint": "eslint ."
   },
