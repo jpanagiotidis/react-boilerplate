@@ -35,5 +35,4 @@ describe('landing page', function() {
       assert.equal(txt4, 'SETTINGS VIEW');
     });
 
-
 });
