@@ -35,9 +35,9 @@ async function appInit(){
       <Route path="/" component={App}>
         <IndexRoute component={TitleView}/>
         <Route path="dashboard" component={DashboardView}>
-        <IndexRoute component={DashboardHome}/>
-        <Route path="users" component={DashboardUsers}/>
-        <Route path="settings" component={DashboardSettings}/>
+          <IndexRoute component={DashboardHome}/>
+          <Route path="users" component={DashboardUsers}/>
+          <Route path="settings" component={DashboardSettings}/>
         </Route>
         <Route path="*" component={NotFound}/>
       </Route>
@@ -45,8 +45,3 @@ async function appInit(){
     document.getElementById('app_frame')
   );
 }
-
-// <Route path="dashboard" component={DashboardView}>
-//   <Route path="/" component={DashboardHomeView}/>
-//   <Route path="/settings" component={DashboardSettingsView}/>
-// </Route>
