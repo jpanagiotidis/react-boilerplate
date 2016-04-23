@@ -1,1 +1,1 @@
-# liquidpace-analytics-web
+# React NodeJS Boilerplate
