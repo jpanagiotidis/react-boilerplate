@@ -1,25 +1,26 @@
 'use strict';
 
-const port = process.env.PORT || 3000;
-const Koa = require('koa');
-const Router = require('koa-router');
-const serve = require('koa-static');
-const convert = require('koa-convert');
-const send = require('koa-send');
-const router = new Router();
-const app = new Koa();
-const _use = app.use;
-app.use = (x) => _use.call(app, convert(x));
-app.use(serve('./build'));
+import config from './config';
+// import { init as initDB } from './models';
+import { init as initServer } from './managers/serverManager.js';
 
-const server = app.listen(port, function () {
-  let host = server.address().address;
-  let port = server.address().port;
-  console.log('liquidpace analytics listening at http://%s:%s', host, port);
-});
+init();
 
-router.get('*', async (ctx) => {
-  await send(ctx, './build/index.html');
-});
+async function init(){
+  try {
+    console.log('STARTING APP');
 
-app.use(router.routes());
+    // console.log('\tSTARTING DB...');
+    // await initDB(config);
+    // console.log('\tDB READY.');
+
+    console.log('\tSTARTING SERVER...');
+    await initServer();
+    console.log('\tSERVER READY.');
+
+    console.log('APP IS READY.');
+  } catch (e) {
+    console.log(e);
+    console.log(e.stack);
+  }
+}
