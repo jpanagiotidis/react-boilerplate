@@ -30,8 +30,6 @@ class DashboardNavigation extends Component{
   }
 }
 
-export default branch(DashboardNavigation, {
-  cursors: {
-    links: ['dashboard', 'links']
-  }
-});
+export default branch({
+  links: ['dashboard', 'links']
+}, DashboardNavigation);

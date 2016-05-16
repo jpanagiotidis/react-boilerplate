@@ -15,4 +15,4 @@ class App extends Component{
   }
 }
 
-export default root(App, tree);
+export default root(tree, App);
