@@ -11,7 +11,7 @@ class DashboardSettings extends Component{
     const self = this;
 
     return(
-      <h1>SETTINGS VIEW</h1>
+      <h1>{'SETTINGS VIEW'}</h1>
     );
   }
 }

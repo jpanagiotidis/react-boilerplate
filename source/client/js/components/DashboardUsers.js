@@ -11,7 +11,7 @@ class DashboardUsers extends Component{
     const self = this;
 
     return(
-      <h1>USERS VIEW</h1>
+      <h1>{'USERS VIEW'}</h1>
     );
   }
 }

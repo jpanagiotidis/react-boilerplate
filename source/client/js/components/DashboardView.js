@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import { Link } from 'react-router';
+import {Link} from 'react-router';
 import {DashboardNavigation} from '../components';
 
 class DashboardView extends Component{
@@ -14,7 +14,7 @@ class DashboardView extends Component{
 
     return(
       <div className="lp-app">
-        <h1>DASHBOARD</h1>
+        <h1>{'DASHBOARD'}</h1>
         <div>
           {self.props.children}
         </div>

@@ -32,14 +32,14 @@ appInit()
 async function appInit(){
   render(
     <Router history={history}>
-      <Route path="/" component={App}>
+      <Route component={App} path="/">
         <IndexRoute component={TitleView}/>
-        <Route path="dashboard" component={DashboardView}>
+        <Route component={DashboardView} path="dashboard">
           <IndexRoute component={DashboardHome}/>
-          <Route path="users" component={DashboardUsers}/>
-          <Route path="settings" component={DashboardSettings}/>
+          <Route component={DashboardUsers} path="users"/>
+          <Route component={DashboardSettings} path="settings"/>
         </Route>
-        <Route path="*" component={NotFound}/>
+        <Route component={NotFound} path="*"/>
       </Route>
     </Router>,
     document.getElementById('app_frame')

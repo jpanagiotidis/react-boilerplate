@@ -129,7 +129,7 @@ exports.config = {
     // variables, such as `browser`. It is the perfect place to define custom commands.
     // before: function (capabilities, specs) {
     // },
-    before: function() {
+    before() {
       var chai = require('chai');
       global.expect = chai.expect;
       chai.Should();

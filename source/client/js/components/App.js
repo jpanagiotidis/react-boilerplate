@@ -1,8 +1,8 @@
 'use strict';
 
-import React, { Component } from 'react';
-import { root } from 'baobab-react/higher-order';
-import { tree } from '../managers/StateManager.js';
+import React, {Component} from 'react';
+import {root} from 'baobab-react/higher-order';
+import {tree} from '../managers/StateManager.js';
 
 class App extends Component{
   constructor(props){

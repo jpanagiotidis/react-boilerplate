@@ -12,7 +12,7 @@ class AppLoader extends Component{
 
     return(
       <div className="lp-loader">
-        <h1>Loading</h1>
+        <h1>{'Loading'}</h1>
       </div>
     );
   }

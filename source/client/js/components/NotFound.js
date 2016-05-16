@@ -12,7 +12,7 @@ class NotFound extends Component{
 
     return(
       <div className="lp-app">
-        <h1>PAGE NOT FOUND</h1>
+        <h1>{'PAGE NOT FOUND'}</h1>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 'user strict';
 
 import Baobab from 'baobab';
-import { browserHistory } from 'react-router';
+import {browserHistory} from 'react-router';
 
 export const tree = new Baobab({
   "app": {

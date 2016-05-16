@@ -1,4 +1,4 @@
-import chai, { assert } from 'chai';
+import chai, {assert} from 'chai';
 const webdriverio = require('./../node_modules/webdriverio/build');
 
 const mochaHigherOrderAsync = (fn) => {
@@ -15,7 +15,9 @@ const mochaHigherOrderAsync = (fn) => {
 describe('my webdriverio tests', function(done){
 
     let client = {};
-    client =  webdriverio.remote({ desiredCapabilities: {browserName: 'chrome'} });
+    client =  webdriverio.remote({
+      desiredCapabilities: {browserName: 'chrome'}
+    });
     client.init(done);
 
     it('Github test',mochaHigherOrderAsync(async () => {
