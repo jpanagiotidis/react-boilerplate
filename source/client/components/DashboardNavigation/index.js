@@ -4,7 +4,7 @@ import _ from 'underscore';
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 import {branch} from 'baobab-react/higher-order';
-import {DashboardNavigationItem} from '../components';
+import {DashboardNavigationItem} from '../../components';
 
 class DashboardNavigation extends Component{
   constructor(props){

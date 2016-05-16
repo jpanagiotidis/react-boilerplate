@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import {root} from 'baobab-react/higher-order';
-import {tree} from '../store';
+import {tree} from '../../store';
 
 class App extends Component{
   constructor(props){

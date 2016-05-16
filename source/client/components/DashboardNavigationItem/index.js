@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import {Link} from 'react-router';
+import style from './style.scss';
 
 class DashboardNavigationItem extends Component{
   constructor(props){
@@ -13,7 +14,7 @@ class DashboardNavigationItem extends Component{
     const classes = [];
 
     if(self.props.current_path === self.props.data.path){
-      classes.push('active');
+      classes.push(style.active);
     }
 
     return(

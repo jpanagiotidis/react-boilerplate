@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-import {DashboardNavigation} from '../components';
+import {DashboardNavigation} from '../../components';
 
 class DashboardView extends Component{
   constructor(props){
