@@ -47,7 +47,7 @@ export function init(){
     server = app.listen(port, function () {
       let host = server.address().address;
       let port = server.address().port;
-      console.log('\t\tliquidpace analytics listening at http://%s:%s', host, port);
+      console.log('\t\tserver listening at http://%s:%s', host, port);
       resolve();
     });
   });

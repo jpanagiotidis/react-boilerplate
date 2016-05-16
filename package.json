@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --progress && node server-polyfill.js",
     "client-dev": "webpack --progress --watch",
-    "server-dev": "node server-polyfill.js",
+    "server-dev": "NODE_ENV=local nodemon server-polyfill.js",
+    "server-debug": "NODE_ENV=local node-debug server-polyfill.js",
     "test": "mocha --timeout 15000 --compilers js:babel-core/register --require babel-polyfill",
     "lint": "eslint ."
   },
@@ -71,6 +72,8 @@
     "eslint-plugin-babel": "3.2.0",
     "eslint-plugin-react": "^5.1.1",
     "mocha": "2.4.5",
+    "node-inspector": "^0.12.8",
+    "nodemon": "^1.9.2",
     "selenium-standalone": "5.1.0",
     "wdio-mocha-framework": "0.2.13",
     "webdriverio": "4.0.7"

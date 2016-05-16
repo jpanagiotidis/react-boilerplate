@@ -1,0 +1,4 @@
+{
+  "verbose": true,
+  "ignore": ["source/client/*", "build/*", "webpack.config.js", "wdio.conf.js"]
+}
