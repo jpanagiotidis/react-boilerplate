@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = [
   {
     devtool: "eval-source-map",
-    entry:  __dirname + "/source/client/js/app.js",
+    entry:  __dirname + "/source/client/app.js",
     output: {
       path: __dirname + "/build",
       filename: "lp-analytics-client.js",

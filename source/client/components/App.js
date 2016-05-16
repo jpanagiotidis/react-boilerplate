@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import {root} from 'baobab-react/higher-order';
-import {tree} from '../managers/StateManager.js';
+import {tree} from '../store';
 
 class App extends Component{
   constructor(props){

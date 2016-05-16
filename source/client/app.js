@@ -1,12 +1,12 @@
 'use strict';
 
-import '../sass/lp.scss';
+import './sass/lp.scss';
 
 import React from 'react';
 import {render} from 'react-dom';
 import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 
-import {history} from './managers/StateManager.js';
+import {history} from './store';
 import {
   AppLoader,
   App,
