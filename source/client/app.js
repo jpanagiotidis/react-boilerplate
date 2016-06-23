@@ -1,6 +1,6 @@
 'use strict';
 
-import './sass/lp.scss';
+import './style-global/style.scss';
 
 import React from 'react';
 import {render} from 'react-dom';
