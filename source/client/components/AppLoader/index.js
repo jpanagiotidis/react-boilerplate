@@ -1,6 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
+import style from './style.scss';
 
 class AppLoader extends Component{
   constructor(props){
@@ -11,9 +12,7 @@ class AppLoader extends Component{
     const self = this;
 
     return(
-      <div className="lp-loader">
-        <h1>{'Loading'}</h1>
-      </div>
+      <div className={style.loader}>Loading...</div>
     );
   }
 }
