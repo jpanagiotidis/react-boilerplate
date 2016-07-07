@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/liquidpace/liquidpace-analytics-web.git"
+    "url": ""
   },
   "author": "calatzidis, jpanagiotidis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/liquidpace/liquidpace-analytics-web/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/liquidpace/liquidpace-analytics-web#readme",
+  "homepage": "",
   "dependencies": {
     "babel-core": "6.8.0",
     "babel-loader": "6.2.4",

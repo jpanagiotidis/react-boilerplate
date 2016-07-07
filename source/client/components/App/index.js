@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import {root} from 'baobab-react/higher-order';
 import {tree} from '../../store';
+import style from './style.scss';
 
 class App extends Component{
   constructor(props){
@@ -11,7 +12,11 @@ class App extends Component{
 
   render(){
     const self = this;
-    return(self.props.children);
+    return(
+      <div className={style.frame}>
+        {self.props.children}
+      </div>
+    );
   }
 }
 

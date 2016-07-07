@@ -15,7 +15,7 @@ describe('landing page', function() {
     it('should have the right title', function () {
         browser.url('/');
         var title = browser.getTitle();
-        assert.equal(title, 'Liquidpace Analytics');
+        assert.equal(title, 'App Title');
         var txt = browser.getText('h1*=APP');
         assert.equal(txt, 'APP TITLE PAGE');
     });

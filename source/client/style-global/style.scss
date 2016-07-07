@@ -1,11 +1,16 @@
-body{
-  background-color: red;
+@import "./config.scss";
 
-  h1{
-    font-size: 40px;
-  }
+html, body{
+  background-color: $color-light-a;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+// #app_frame{
+//
+// }
 // .lp-db-nav-menu{
 //   ul{
 //     li.active{

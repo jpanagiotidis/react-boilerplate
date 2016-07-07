@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 import config from '../../config';
+import style from './style.scss';
 
 class TitleView extends Component{
   constructor(props){
@@ -13,8 +14,8 @@ class TitleView extends Component{
     const self = this;
 
     return(
-      <div className="app">
-        <h1>{config.STRINGS.GENERIC.TITLE}</h1>
+      <div className={style.frame}>
+        <h1 className={style.title}>{config.STRINGS.GENERIC.TITLE}</h1>
         <Link to="/dashboard">{'Start'}</Link>
       </div>
     );
